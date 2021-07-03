@@ -4,7 +4,7 @@ function init() {
 
 
 	var sphereMaterial = getMaterial('standard', 'rgb(255,255,255)');
-	var sphere = getSphere(sphereMaterial,10,24);
+	var sphere = getSphere(sphereMaterial,3,24);
 
 	var planeMaterial = getMaterial('standard', 'rgb(255,255,255)');
 	var plane = getPlane(planeMaterial,300);
@@ -44,8 +44,8 @@ function init() {
 	planeMaterial.bumpMap = loader.load('./assets/textures/concrete.jpg');
 	planeMaterial.roughnessMap = loader.load('./assets/textures/concrete.jpg');
 	planeMaterial.bumpScale = 0.01;
-	planeMaterial.metalness = 0.1;
-	planeMaterial.roughness = 0.7;
+	planeMaterial.metalness = 1;
+	planeMaterial.roughness = 0.25;
 	planeMaterial.envMap = reflectionCube;
 	sphereMaterial.roughnessMap = loader.load('./assets/textures/fingerprint.png')
 	sphereMaterial.envMap = reflectionCube;
